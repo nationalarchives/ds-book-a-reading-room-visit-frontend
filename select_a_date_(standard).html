@@ -184,7 +184,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-8">
                 <h2>
-                    You are viewing standard visit availability
+                    Standard visit availability in the Document reading room
                 </h2>
             </div>
             <div class="col-lg-4 col-md-4">
@@ -200,24 +200,27 @@
             <div class="col-md-4 col-sm-4">
                 <h3>Choose a reading room</h3>
 
-
                     <form id="room-selection-form" action="/book-a-reading-room-visit/standard-order-visit/availability" method="GET">
-                        <fieldset>
+
+                        <fieldset style="border: 1px solid #134571 !important; border-bottom: 4px solid #134571 !important; background: rgba(19, 69, 113, 0.12);">
                             <legend class="sr-only">Choose a reading room</legend>
+
 
                             <div>
                                 <label for="standard-room">Document reading room</label>
                                 <input checked="checked" id="standard-room" name="seattype" type="radio" value="standard-reading-room" />
-                                <p class="helper-text">If you are unsure of which room you need, choose this one. We can change this later if we need to.</p>
+                                <p class="helper-text" style="color: #222;">You can use this room to view documents of mixed sizes. If there is no availability for your preferred date, check availability in our Map and large document reading room.</p>
                             </div>
 
                             <div class="border-top">
                                 <label for="map-and-lg-room">Map and large document reading room</label>
                                 <input id="map-and-lg-room" name="seattype" type="radio" value="map-and-large-document-reading-room" />
-                                <p class="helper-text">Choose this room if you know the documents you are ordering are large or are dated pre-16th century.</p>
+                                <p class="helper-text" style="color: #222;">You can use this room if you know some of the documents you are ordering are large or are dated pre-16th century.</p>
                             </div>
+                            <p>We can change room allocation later if we need to.</p>
                             <button class="button" type="submit">Update availability</button>
                         </fieldset>
+
                         <div class="prompt-white">
                             <details open>
                                 <summary>Need a camera stand?</summary>
@@ -241,6 +244,7 @@
         <div id="date-selection">
             <div class="col-md-8 col-sm-8">
                 <h3>Available dates</h3>
+
                 <ul>
                         <li class="date">
                             <span class="col-md-12 col-sm-12 col-xs-12 no-availability">
