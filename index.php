@@ -96,7 +96,8 @@
 <h2>Candidates for 12 week availability</h2>
 <ul>
     <li><span>1.1</span><a href="select_a_date_(standard)_12_weeks_jumplinks.html">Select a date (standard visit) - jumplink variant</a><br>select_a_date_(standard)_12_weeks_jumplinks.html</li>
-    <li><span>1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure.html">Select a date (standard visit) - disclosure variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure.html</li>
+    <li><span>1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure.html">Select a date (standard visit) - disclosure by week variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure.html</li>
+    <li><span>1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure_month.html">Select a date (standard visit) - disclosure by month variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure_month.html</li>
 </ul>
 
 <h2>Page templates</h2>
