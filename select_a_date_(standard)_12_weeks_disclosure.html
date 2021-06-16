@@ -6,34 +6,45 @@
     <title>Select date - standard booking - The National Archives</title>
 
     <style>
-        summary {
+        #date-selection summary {
             padding: 2rem;
             font-weight: bold;
         }
 
-        details[open] {
-            border: 1px solid #134571;
+        #date-selection summary:focus {
+            outline: 5px solid #1d70b8;
+            outline-offset: 0;
+            z-index: 999;
+            background-color: #fff;
         }
 
-        details[open] > summary {
-            border-bottom: 1px solid #134571;
-            background: rgba(19, 69, 113, 0.12);
+        #date-selection details[open] {
+            border: 1px solid #dedede;
         }
 
-        details[open] + details[open] {
+        #date-selection details > summary {
+            border-bottom: 3px solid #dedede;
+            /*background: rgba(19, 69, 113, 0.12);*/
+        }
+
+        #date-selection details[open] + details[open] {
             border-top-width: 0;
         }
 
-        .av-dates li {
+        #date-selection details + details[open] {
+            border-top-width: 0;
+        }
+
+        #date-selection .av-dates li {
             margin: 1em;
             list-style: none;
         }
 
-        .av-dates span {
+        #date-selection .av-dates span {
             float: right;
         }
 
-        summary span:last-child {
+        #date-selection summary span:last-child {
             float: right;
         }
 
@@ -347,11 +358,11 @@
                             </fieldset>
 
                             <div class="prompt-white">
-                                <details open>
+                                <details >
                                     <summary>Need a camera stand?</summary>
                                     <p class="helper-text no-margin no-padding">
                                         All seats in the Document reading room have a <a target="_blank"
-                                                                                         rel="noreferrer noopener"
+                                                                                         rel="noreferrer noer"
                                                                                          href="https://www.nationalarchives.gov.uk/about/visit-us/researching-here/can-take-reading-rooms/#camera-stand">camera
                                         stand</a> provided. If you are visiting the Map and large document reading room,
                                         tell us if you need a camera stand in the ‘Access needs and research requests’
@@ -360,7 +371,7 @@
                                 </details>
                             </div>
                             <div class="prompt-white">
-                                <details open>
+                                <details >
                                     <summary>Are accessible seats available?</summary>
                                     <p class="helper-text no-margin no-padding">
                                         All seats in our reading rooms are accessible. You can tell us about your other
@@ -378,123 +389,123 @@
                         <h3>Available dates</h3>
 
                         <details>
-                            <summary><span>Week commencing 21 June 2021</span> <span>0 places available</span></summary>
+                            <summary><span>22 to 26 June 2021</span> <span>0 places available</span></summary>
                             <ul class="av-dates">
-                                <li>Monday 21 June <span>0 places available</span></li>
                                 <li>Tuesday 22 June <span>0 places available</span></li>
                                 <li>Wednesday 23 June <span>0 places available</span></li>
                                 <li>Thursday 24 June <span>0 places available</span></li>
                                 <li>Friday 25 June <span>0 places available</span></li>
+                                <li>Saturday 26 June <span>0 places available</span></li>
                             </ul>
                         </details>
                         <details>
-                            <summary><span>Week commencing 28 June</span><span>0 spaces available</span></summary>
+                            <summary><span>29 June to 3 July 2021</span><span>0 spaces available</span></summary>
                             <ul class="av-dates">
-                                <li>Monday 28 June <span>0 places available</span></li>
                                 <li>Tuesday 29 June <span>0 places available</span></li>
                                 <li>Wednesday 30 June <span>0 places available</span></li>
                                 <li>Thursday 1 July <span>0 places available</span></li>
                                 <li>Friday 2 July <span>0 places available</span></li>
+                                <li>Saturday 3 July <span>0 places available</span></li>
                             </ul>
                         </details>
                         <details>
-                            <summary><span>Week commencing 5 July</span><span>0 spaces available</span></summary>
+                            <summary><span>6 to 10 July 2021</span><span>0 spaces available</span></summary>
                             <ul class="av-dates">
-                                <li>Monday 5 July <span>0 places available</span></li>
                                 <li>Tuesday 6 July <span>0 places available</span></li>
                                 <li>Wednesday 7 July <span>0 places available</span></li>
                                 <li>Thursday 8 July <span>0 places available</span></li>
                                 <li>Friday 9 July <span>0 places available</span></li>
+                                <li>Saturday 10 July <span>0 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 12 July</span><span>3 places available</span></summary>
+                        <details >
+                            <summary><span>13 to 17 July 2021</span><span>3 places available</span></summary>
                             <ul class="av-dates">
-                                <li>Monday 12 July <span>0 places available</span></li>
                                 <li>Tuesday 13 July <span>0 places available</span></li>
                                 <li>Wednesday 14 July <span>0 places available</span></li>
                                 <li>Thursday 15 July <span>0 places available</span></li>
                                 <li><a href="#">Friday 16 July</a> <span>3 places available</span></li>
+                                <li>Saturday 17 July <span>0 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 19 July</span><span>142 places available</span></summary>
+                        <details >
+                            <summary><span>20 to 24 July 2021</span><span>142 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 19 July</a> <span>5 places available</span></li>
                                 <li><a href="#">Tuesday 20 July</a> <span>18 places available</span></li>
                                 <li><a href="#">Wednesday 21 July</a> <span>23 places available</span></li>
                                 <li><a href="#">Thursday 22 July</a> <span>30 places available</span></li>
                                 <li><a href="#">Friday 23 July</a> <span>67 places available</span></li>
+                                <li><a href="#">Saturday 24 July</a> <span>5 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 26 July</span><span>300 places available</span></summary>
+                        <details >
+                            <summary><span>27 to 31 July 2021</span><span>300 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 26 July</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 27 July</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 28 July</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 29 July</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 30 July</a> <span>75 places available</span></li>
+                                <li><a href="#">Saturday 31 July</a> <span>42 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 2 August</span><span>300 places available</span></summary>
+                        <details >
+                            <summary><span>3 to 7 August 2021</span><span>300 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 2 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 3 August</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 4 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 5 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 6 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Saturday 7 August</a> <span>42 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 9 August</span><span>300 places available</span></summary>
+                        <details >
+                            <summary><span>10 to 14 August 2021</span><span>300 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 9 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 10 August</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 11 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 12 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 13 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Saturday 14 August</a> <span>42 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 16 August</span><span>300 places available</span></summary>
+                        <details >
+                            <summary><span>18 to 22 August 2021</span><span>300 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 17 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 18 August</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 19 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 20 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 21 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Saturday 22 August</a> <span>42 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 24 August</span><span>300 places available</span></summary>
+                        <details >
+                            <summary><span>25 to 29 August 2021</span><span>300 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 24 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 25 August</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 26 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 27 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 28 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Saturday 29 August</a> <span>42 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 31 August</span><span>300 places available</span></summary>
+                        <details >
+                            <summary><span>1 to 5 September 2021</span><span>300 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 31 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 1 September</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 2 September</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 3 September</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 4 September</a> <span>75 places available</span></li>
+                                <li><a href="#">Saturday 5 September</a> <span>75 places available</span></li>
                             </ul>
                         </details>
-                        <details open>
-                            <summary><span>Week commencing 7 September</span><span>300 places available</span></summary>
+                        <details >
+                            <summary><span>8 to 12 September 2021</span><span>300 places available</span></summary>
                             <ul class="av-dates">
-                                <li><a href="#">Monday 7 September</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 8 September</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 9 September</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 10 September</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 11 September</a> <span>75 places available</span></li>
+                                <li><a href="#">Saturday 12 September</a> <span>42 places available</span></li>
                             </ul>
                         </details>
                     </div>
