@@ -838,37 +838,6 @@ form {
   padding: 0 !important;
 }
 
-details {
-
-  @media (min-width: $screen-phone) {
-
-    summary[tabindex='-1'] {
-      color: #000000;
-      text-decoration: none;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-  }
-
-  summary {
-    color: #134571;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
-  &[open] {
-    summary {
-
-    }
-  }
-}
-
 .reservation-options {
   @media (max-width: $screen-phone) {
 

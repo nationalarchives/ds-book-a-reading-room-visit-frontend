@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Select date - standard booking - The National Archives</title>
+
+    <style>
+        summary {
+            padding: 2rem;
+            font-weight: bold;
+        }
+
+        details[open] {
+            border: 1px solid #134571;
+        }
+
+        details[open] > summary {
+            border-bottom: 1px solid #134571;
+            background: rgba(19, 69, 113, 0.12);
+        }
+
+        details[open] + details[open] {
+            border-top-width: 0;
+        }
+
+        .av-dates li {
+            margin: 1em;
+            list-style: none;
+        }
+
+        .av-dates span {
+            float: right;
+        }
+
+        summary span:last-child {
+            float: right;
+        }
+
+        #date-selection ul li.date .no-availability {
+            border: none !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+    </style>
 
     <script>document.getElementsByTagName("html")[0].className = "js";</script>
 
-    <link rel='stylesheet' id='tna-parent-styles-css' href='styles/dist/base-sass.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='tna-parent-styles-css' href='styles/dist/base-sass.css' type='text/css' media='all'/>
     <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
@@ -15,13 +55,18 @@
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-T8DSWV');</script>
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T8DSWV');</script>
     <!-- End Google Tag Manager -->
 </head>
 <body>
@@ -31,19 +76,21 @@
             <div class="col-md-12">
                 <div class="notice">
                     <strong class="title">BETA</strong>
-                    <p>This is a new service – your <a target="_blank" rel="noreferrer noopener" href="https://www.smartsurvey.co.uk/s/readingroomvisitbooking/">feedback</a> will help us to improve it.</a></p></div>
+                    <p>This is a new service – your <a target="_blank" rel="noreferrer noopener"
+                                                       href="https://www.smartsurvey.co.uk/s/readingroomvisitbooking/">feedback</a>
+                        will help us to improve it.</p></div>
             </div>
         </div>
     </div>
 </div>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8DSWV"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8DSWV"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-    <header id="header">
+<header id="header">
     <a id="skip-to-main-content" href="#main-content">Skip to Main Content</a>
     <div class="container">
         <div class="row">
@@ -51,7 +98,8 @@
                 <button aria-label="Toggle menu" id="mega-menu-mobile"></button>
                 <a href="https://dev-www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
                    class="visible-lg visible-md visible-sm">
-                    <img src="/book-a-reading-room-visit/images/logo-white.png" alt="The National Archives" class="img-responsive logo" />
+                    <img src="/book-a-reading-room-visit/images/logo-white.png" alt="The National Archives"
+                         class="img-responsive logo"/>
                 </a>
             </div>
             <div class="col-xs-8 col-sm-2" id="mobile-logo-holder">
@@ -61,7 +109,8 @@
                 </button>
                 <a href="https://www.nationalarchives.gov.uk" title="Go to The National Archives homepage"
                    class="hidden-lg hidden-md hidden-sm">
-                    <img src="/book-a-reading-room-visit/images/logo-white.png" alt="The National Archives" class="img-responsive" />
+                    <img src="/book-a-reading-room-visit/images/logo-white.png" alt="The National Archives"
+                         class="img-responsive"/>
                 </a>
             </div>
         </div>
@@ -71,583 +120,571 @@
 <nav id="nav" class="navigation">
     <div class="mega-menu clearfix">
         <ul class="main-ul">
-    <li>
-        <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about" class="toggle-sub-menu">About us</a>
-        <ul class="sub-menu">
-            <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/about">About us home</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/our-role/">Our role</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/">Visit us</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/opening-times/">Opening times</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/">What’s on</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/venue-hire/">Venue hire</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/jobs/">Jobs</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/get-involved/">Get involved</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/news/">News</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/commercial-opportunities/">Commercial opportunities</a></li>
+            <li>
+                <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about" class="toggle-sub-menu">About
+                    us</a>
+                <ul class="sub-menu">
+                    <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/about">About us home</a>
+                    </li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/our-role/">Our role</a>
+                    </li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/">Visit us</a>
+                    </li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/about/visit-us/opening-times/">Opening times</a>
+                    </li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/whats-on/">What’s
+                        on</a></li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/visit-us/venue-hire/">Venue
+                        hire</a></li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/jobs/">Jobs</a></li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/get-involved/">Get
+                        involved</a></li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/about/news/">News</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/about/commercial-opportunities/">Commercial
+                        opportunities</a></li>
+                </ul>
+            </li>
+            <li>
+                <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/" class="toggle-sub-menu">Education</a>
+                <ul class="sub-menu">
+                    <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/education/">Education
+                        home</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?time-period=medieval,early-modern,empire-and-industry,victorians,early-20th-century,interwar,second-world-war,postwar">Time
+                        periods</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=lesson">Lessons</a>
+                    </li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=workshop">Workshops</a>
+                    </li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/education/teachers/professional-development/">Professional
+                        development</a></li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/teachers/">For
+                        teachers</a></li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/students/">For
+                        students</a></li>
+                </ul>
+            </li>
+            <li>
+                <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research"
+                   class="toggle-sub-menu">Help with your research</a>
+                <ul class="sub-menu">
+                    <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/help-with-your-research">Help
+                        with your research home</a></li>
+                    <li><a data-gtm="mega-menu" href="https://discovery.nationalarchives.gov.uk/">Search Discovery, our
+                        catalogue</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/help-with-your-research/start-here/">Start your
+                        research here</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides-keywords/">Research
+                        guides A-Z</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/?research-category=online">Online
+                        collections</a></li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/webarchive/">UK Government Web
+                        Archive</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/contact-us/british-citizenship-services/">British
+                        citizenship services</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/">Record
+                        copying</a></li>
+                </ul>
+            </li>
+            <li>
+                <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/"
+                   class="toggle-sub-menu">Information management</a>
+                <ul class="sub-menu">
+                    <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/information-management/">Information
+                        management home</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/information-management/browse-guidance-standards/">Guidance
+                        and standards A-Z</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">Copyright</a>
+                    </li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/information-management/manage-information/">How to
+                        manage your information</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/">Re-using
+                        PSI</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/information-management/producing-official-publications/">Producing
+                        official publications</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/information-management/legislation/">Legislation
+                        and regulations</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/information-management/training/">Training</a></li>
+                </ul>
+            </li>
+            <li>
+                <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector"
+                   class="toggle-sub-menu">Archives sector</a>
+                <ul class="sub-menu">
+                    <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/archives-sector">Archives
+                        sector home</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/archives-sector/our-archives-sector-role/historical-manuscripts-commission/">Historical
+                        Manuscripts Commission</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/archives-sector/finding-funding/">Finding
+                        funding</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/archives-sector/projects-and-programmes/">Projects
+                        and programmes</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/archives-sector/case-studies-and-research-reports/">Case
+                        studies and research reports</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/archives-sector/advice-and-guidance/">Operating
+                        your archive</a></li>
+                    <li><a data-gtm="mega-menu"
+                           href="https://www.nationalarchives.gov.uk/archives-sector/our-archives-sector-role/">Our role
+                        in the archives sector</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="toggle-sub-menu" id="more-link">More…</div>
+                <ul class="sub-menu">
+                    <li><a data-gtm="mega-menu" href="https://shop.nationalarchives.gov.uk/">Shop</a></li>
+                    <li><a data-gtm="mega-menu" href="https://images.nationalarchives.gov.uk/">Image library</a></li>
+                    <li><a data-gtm="mega-menu" href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
+                    <li><a data-gtm="mega-menu" href="https://media.nationalarchives.gov.uk/">Podcasts and videos</a>
+                    </li>
+                    <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/contact-us/">Contact us</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
-    </li>
-    <li>
-        <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/" class="toggle-sub-menu">Education</a>
-        <ul class="sub-menu">
-            <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/education/">Education home</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?time-period=medieval,early-modern,empire-and-industry,victorians,early-20th-century,interwar,second-world-war,postwar">Time periods</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=lesson">Lessons</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/sessions-and-resources/?resource-type=workshop">Workshops</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/teachers/professional-development/">Professional development</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/teachers/">For teachers</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/education/students/">For students</a></li>
-        </ul>
-    </li>
-    <li>
-        <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research" class="toggle-sub-menu">Help with your research</a>
-        <ul class="sub-menu">
-            <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/help-with-your-research">Help with your research home</a></li>
-            <li><a data-gtm="mega-menu" href="https://discovery.nationalarchives.gov.uk/">Search Discovery, our catalogue</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research/start-here/">Start your research here</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides-keywords/">Research guides A-Z</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/?research-category=online">Online collections</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/webarchive/">UK Government Web Archive</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/contact-us/british-citizenship-services/">British citizenship services</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/help-with-your-research/record-copying/">Record copying</a></li>
-        </ul>
-    </li>
-    <li>
-        <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/" class="toggle-sub-menu">Information management</a>
-        <ul class="sub-menu">
-            <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/information-management/">Information management home</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/browse-guidance-standards/">Guidance and standards A-Z</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">Copyright</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/manage-information/">How to manage your information</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/">Re-using PSI</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/producing-official-publications/">Producing official publications</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/legislation/">Legislation and regulations</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/information-management/training/">Training</a></li>
-        </ul>
-    </li>
-    <li>
-        <a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector" class="toggle-sub-menu">Archives sector</a>
-        <ul class="sub-menu">
-            <li class="mobile-home-link"><a href="https://www.nationalarchives.gov.uk/archives-sector">Archives sector home</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector/our-archives-sector-role/historical-manuscripts-commission/">Historical Manuscripts Commission</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector/finding-funding/">Finding funding</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector/projects-and-programmes/">Projects and programmes</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector/case-studies-and-research-reports/">Case studies and research reports</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector/advice-and-guidance/">Operating your archive</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/archives-sector/our-archives-sector-role/">Our role in the archives sector</a></li>
-        </ul>
-    </li>
-    <li>
-        <div class="toggle-sub-menu" id="more-link">More…</div>
-        <ul class="sub-menu">
-            <li><a data-gtm="mega-menu" href="https://shop.nationalarchives.gov.uk/">Shop</a></li>
-            <li><a data-gtm="mega-menu" href="https://images.nationalarchives.gov.uk/">Image library</a></li>
-            <li><a data-gtm="mega-menu" href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
-            <li><a data-gtm="mega-menu" href="https://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
-            <li><a data-gtm="mega-menu" href="https://www.nationalarchives.gov.uk/contact-us/">Contact us</a></li>
-        </ul>
-    </li>
-</ul>
     </div>
 </nav>
 
 
-    <main class="pb-3 kbs" id="main-content">
-        <div class="container">
-            <div class="tna-breadcrumb">
-                <ul>
-                    <li><a href="/">Home</a> &gt;</li>
-                    <li><a href="/book-a-reading-room-visit">Book a visit to view our documents</a></li>
-                </ul>
+<main class="pb-3 kbs" id="main-content">
+    <div class="container">
+        <div class="tna-breadcrumb">
+            <ul>
+                <li><a href="/">Home</a> &gt;</li>
+                <li><a href="/book-a-reading-room-visit">Book a visit to view our documents</a></li>
+            </ul>
+        </div>
+
+
+        <h1 class="display-4">1. Select a date</h1>
+
+        <div class="container content-wrapper">
+
+            <div class="text-center">
+                <section class="row" id="progress-bar">
+                    <h2 class="sr-only">Progress</h2>
+                    <div class="col-md-12">
+                        <ol>
+                            <li aria-current="page" class="active"><span class="step-number">1</span> <span
+                                    class="step">Select a date</span></li>
+                            <li><span class="step-number">2</span> <span class="step">Enter your details</span></li>
+                            <li><span class="step-number">3</span> <span class="step">Your visit details</span></li>
+                            <li><span class="step-number">4</span> <span class="step">Order documents</span></li>
+                            <li><span class="step-number">5</span> <span class="step">Order summary</span></li>
+                        </ol>
+                    </div>
+                </section>
             </div>
 
-
-<h1 class="display-4">1. Select a date</h1>
-
-<div class="container content-wrapper">
-
-    <div class="text-center">
-        <section class="row" id="progress-bar">
-            <h2 class="sr-only">Progress</h2>
-            <div class="col-md-12">
-                <ol>
-                    <li aria-current="page" class="active"><span class="step-number">1</span> <span class="step">Select a date</span></li>
-                    <li><span class="step-number">2</span> <span class="step">Enter your details</span></li>
-                    <li><span class="step-number">3</span> <span class="step">Your visit details</span></li>
-                    <li><span class="step-number">4</span> <span class="step">Order documents</span></li>
-                    <li><span class="step-number">5</span> <span class="step">Order summary</span></li>
-                </ol>
+            <div class="heading">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <h2>
+                            Standard visit availability in the Document reading room
+                        </h2>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="visit-toggler">
+                            <a href="/book-a-reading-room-visit/bulk-order-visit/availability">See bulk order visit
+                                availability</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
 
-    <div class="heading">
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <h2>
-                    Standard visit availability in the Document reading room
-                </h2>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="visit-toggler">
-                        <a href="/book-a-reading-room-visit/bulk-order-visit/availability">See bulk order visit availability</a>
+            <div class="row">
+                <div id="room-selection" class="align-left">
+                    <div class="col-md-4 col-sm-4">
+                        <h3>Choose a reading room</h3>
+
+                        <form id="room-selection-form"
+                              action="/book-a-reading-room-visit/standard-order-visit/availability" method="GET">
+
+                            <fieldset
+                                    style="border: 1px solid #134571 !important; border-bottom: 4px solid #134571 !important; background: rgba(19, 69, 113, 0.12);">
+                                <legend class="sr-only">Choose a reading room</legend>
+
+
+                                <div>
+                                    <label for="standard-room">Document reading room</label>
+                                    <input checked="checked" id="standard-room" name="seattype" type="radio"
+                                           value="standard-reading-room"/>
+                                    <p class="helper-text" style="color: #222;">If you are unsure of which room you
+                                        need, choose this one.</p>
+                                </div>
+
+                                <div class="border-top">
+                                    <label for="map-and-lg-room">Map and large document reading room</label>
+                                    <input id="map-and-lg-room" name="seattype" type="radio"
+                                           value="map-and-large-document-reading-room"/>
+                                    <p class="helper-text" style="color: #222;">You can use this room if any of the
+                                        documents you are ordering are maps, large documents or dated pre-16th
+                                        century. </p>
+                                </div>
+                                <p>We can change room allocation later if we need to.</p>
+                                <button class="button" type="submit">Update availability</button>
+                            </fieldset>
+
+                            <div class="prompt-white">
+                                <details open>
+                                    <summary>Need a camera stand?</summary>
+                                    <p class="helper-text no-margin no-padding">
+                                        All seats in the Document reading room have a <a target="_blank"
+                                                                                         rel="noreferrer noopener"
+                                                                                         href="https://www.nationalarchives.gov.uk/about/visit-us/researching-here/can-take-reading-rooms/#camera-stand">camera
+                                        stand</a> provided. If you are visiting the Map and large document reading room,
+                                        tell us if you need a camera stand in the ‘Access needs and research requests’
+                                        box when you order your documents in step 4.
+                                    </p>
+                                </details>
+                            </div>
+                            <div class="prompt-white">
+                                <details open>
+                                    <summary>Are accessible seats available?</summary>
+                                    <p class="helper-text no-margin no-padding">
+                                        All seats in our reading rooms are accessible. You can tell us about your other
+                                        access needs when you order your documents in step 4.
+                                    </p>
+                                </details>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div id="date-selection">
+                    <div class="col-md-8 col-sm-8">
+                        <h3>Available dates</h3>
+
+                        <details>
+                            <summary><span>Week commencing 21 June 2021</span> <span>0 places available</span></summary>
+                            <ul class="av-dates">
+                                <li>Monday 21 June <span>0 places available</span></li>
+                                <li>Tuesday 22 June <span>0 places available</span></li>
+                                <li>Wednesday 23 June <span>0 places available</span></li>
+                                <li>Thursday 24 June <span>0 places available</span></li>
+                                <li>Friday 25 June <span>0 places available</span></li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><span>Week commencing 28 June</span><span>0 spaces available</span></summary>
+                            <ul class="av-dates">
+                                <li>Monday 28 June <span>0 places available</span></li>
+                                <li>Tuesday 29 June <span>0 places available</span></li>
+                                <li>Wednesday 30 June <span>0 places available</span></li>
+                                <li>Thursday 1 July <span>0 places available</span></li>
+                                <li>Friday 2 July <span>0 places available</span></li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary><span>Week commencing 5 July</span><span>0 spaces available</span></summary>
+                            <ul class="av-dates">
+                                <li>Monday 5 July <span>0 places available</span></li>
+                                <li>Tuesday 6 July <span>0 places available</span></li>
+                                <li>Wednesday 7 July <span>0 places available</span></li>
+                                <li>Thursday 8 July <span>0 places available</span></li>
+                                <li>Friday 9 July <span>0 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 12 July</span><span>3 places available</span></summary>
+                            <ul class="av-dates">
+                                <li>Monday 12 July <span>0 places available</span></li>
+                                <li>Tuesday 13 July <span>0 places available</span></li>
+                                <li>Wednesday 14 July <span>0 places available</span></li>
+                                <li>Thursday 15 July <span>0 places available</span></li>
+                                <li><a href="#">Friday 16 July</a> <span>3 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 19 July</span><span>142 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 19 July</a> <span>5 places available</span></li>
+                                <li><a href="#">Tuesday 20 July</a> <span>18 places available</span></li>
+                                <li><a href="#">Wednesday 21 July</a> <span>23 places available</span></li>
+                                <li><a href="#">Thursday 22 July</a> <span>30 places available</span></li>
+                                <li><a href="#">Friday 23 July</a> <span>67 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 26 July</span><span>300 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 26 July</a> <span>42 places available</span></li>
+                                <li><a href="#">Tuesday 27 July</a> <span>38 places available</span></li>
+                                <li><a href="#">Wednesday 28 July</a> <span>70 places available</span></li>
+                                <li><a href="#">Thursday 29 July</a> <span>75 places available</span></li>
+                                <li><a href="#">Friday 30 July</a> <span>75 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 2 August</span><span>300 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 2 August</a> <span>42 places available</span></li>
+                                <li><a href="#">Tuesday 3 August</a> <span>38 places available</span></li>
+                                <li><a href="#">Wednesday 4 August</a> <span>70 places available</span></li>
+                                <li><a href="#">Thursday 5 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Friday 6 August</a> <span>75 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 9 August</span><span>300 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 9 August</a> <span>42 places available</span></li>
+                                <li><a href="#">Tuesday 10 August</a> <span>38 places available</span></li>
+                                <li><a href="#">Wednesday 11 August</a> <span>70 places available</span></li>
+                                <li><a href="#">Thursday 12 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Friday 13 August</a> <span>75 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 16 August</span><span>300 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 17 August</a> <span>42 places available</span></li>
+                                <li><a href="#">Tuesday 18 August</a> <span>38 places available</span></li>
+                                <li><a href="#">Wednesday 19 August</a> <span>70 places available</span></li>
+                                <li><a href="#">Thursday 20 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Friday 21 August</a> <span>75 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 24 August</span><span>300 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 24 August</a> <span>42 places available</span></li>
+                                <li><a href="#">Tuesday 25 August</a> <span>38 places available</span></li>
+                                <li><a href="#">Wednesday 26 August</a> <span>70 places available</span></li>
+                                <li><a href="#">Thursday 27 August</a> <span>75 places available</span></li>
+                                <li><a href="#">Friday 28 August</a> <span>75 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 31 August</span><span>300 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 31 August</a> <span>42 places available</span></li>
+                                <li><a href="#">Tuesday 1 September</a> <span>38 places available</span></li>
+                                <li><a href="#">Wednesday 2 September</a> <span>70 places available</span></li>
+                                <li><a href="#">Thursday 3 September</a> <span>75 places available</span></li>
+                                <li><a href="#">Friday 4 September</a> <span>75 places available</span></li>
+                            </ul>
+                        </details>
+                        <details open>
+                            <summary><span>Week commencing 7 September</span><span>300 places available</span></summary>
+                            <ul class="av-dates">
+                                <li><a href="#">Monday 7 September</a> <span>42 places available</span></li>
+                                <li><a href="#">Tuesday 8 September</a> <span>38 places available</span></li>
+                                <li><a href="#">Wednesday 9 September</a> <span>70 places available</span></li>
+                                <li><a href="#">Thursday 10 September</a> <span>75 places available</span></li>
+                                <li><a href="#">Friday 11 September</a> <span>75 places available</span></li>
+                            </ul>
+                        </details>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+</main>
+<section class="contact-footer">
     <div class="row">
-        <div id="room-selection" class="align-left">
-            <div class="col-md-4 col-sm-4">
-                <h3>Choose a reading room</h3>
-
-                    <form id="room-selection-form" action="/book-a-reading-room-visit/standard-order-visit/availability" method="GET">
-
-                        <fieldset style="border: 1px solid #134571 !important; border-bottom: 4px solid #134571 !important; background: rgba(19, 69, 113, 0.12);">
-                            <legend class="sr-only">Choose a reading room</legend>
-
-
-                            <div>
-                                <label for="standard-room">Document reading room</label>
-                                <input checked="checked" id="standard-room" name="seattype" type="radio" value="standard-reading-room" />
-                                <p class="helper-text" style="color: #222;">If you are unsure of which room you need, choose this one.</p>
-                            </div>
-
-                            <div class="border-top">
-                                <label for="map-and-lg-room">Map and large document reading room</label>
-                                <input id="map-and-lg-room" name="seattype" type="radio" value="map-and-large-document-reading-room" />
-                                <p class="helper-text" style="color: #222;">You can use this room if any of the documents you are ordering are maps, large documents or dated pre-16th century. </p>
-                            </div>
-                            <p>We can change room allocation later if we need to.</p>
-                            <button class="button" type="submit">Update availability</button>
-                        </fieldset>
-
-                        <div class="prompt-white">
-                            <details open>
-                                <summary>Need a camera stand?</summary>
-                                <p class="helper-text no-margin no-padding">
-                                    All seats in the Document reading room have a <a target="_blank" rel="noreferrer noopener" href="https://www.nationalarchives.gov.uk/about/visit-us/researching-here/can-take-reading-rooms/#camera-stand">camera stand</a> provided. If you are visiting the Map and large document reading room, tell us if you need a camera stand in the ‘Access needs and research requests’ box when you order your documents in step 4.
-                                </p>
-                        </div>
-                        <div class="prompt-white">
-                            <details open>
-                            <summary>Are accessible seats available?</summary>
-                            <p class="helper-text no-margin no-padding">
-                                All seats in our reading rooms are accessible. You can tell us about your other access needs when you order your documents in step 4.
-                            </p>
-                            </details>
-                        </div>
-                    </form>
-            </div>
-
+        <div class="col-md-6 first">
+            <h2>Need help with this service?</h2>
+            <a target="_blank" rel="noreferrer noopener" href="https://www.nationalarchives.gov.uk/contact-us/">Contact
+                us</a>
         </div>
-
-        <div id="date-selection">
-            <div class="col-md-8 col-sm-8">
-                <h3>Available dates</h3>
-
-                <ul>
-                        <li class="date">
-                            <span class="col-md-12 col-sm-12 col-xs-12 no-availability">
-                                <span class="col-md-6 col-sm-6 col-xs-6 align-left">Tuesday 06 April 2021</span>
-                                <span class="col-md-6 col-sm-6 col-xs-6 align-right">0 places available</span>
-                            </span>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/07/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Wednesday 07 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">78 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/08/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Thursday 08 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">76 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <span class="col-md-12 col-sm-12 col-xs-12 no-availability">
-                                    <span class="col-md-6 col-sm-6 col-xs-6 align-left">Friday 09 April 2021</span>
-                                    <span class="col-md-6 col-sm-6 col-xs-6 align-right">0 places available</span>
-                                </span>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/10/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Saturday 10 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">77 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/13/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Tuesday 13 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">75 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/14/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Wednesday 14 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">78 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/15/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Thursday 15 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/16/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Friday 16 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/17/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Saturday 17 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">78 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/20/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Tuesday 20 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/21/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Wednesday 21 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/22/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Thursday 22 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/23/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Friday 23 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/24/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Saturday 24 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/27/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Tuesday 27 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/28/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Wednesday 28 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/29/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Thursday 29 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="04/30/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Friday 30 April 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                        <li class="date">
-                                <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST">
-                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Fm9gkvp_CNDnCItEvXaYYdAnQrx4hOw3e7tOKfM6Y97gYwmaHHVfxFkvh2UTbx0sFsd9VAafDNI7bVaWtzA9Ybluxa2ZPn5fm6vCiUNag7KFZAy_OpCvuvz9hfmsYMs-pj596ict-k_FvN3nUlU13k" />
-                                    <input name="seattype" type="hidden" value="standard-reading-room" />
-                                    <input name="bookingstartdate" type="hidden" value="05/04/2021 00:00:00" />
-                                    <button class="button" type="submit">
-                                        <span class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-left">Tuesday 04 May 2021</span>
-                                            <span class="col-md-6 col-sm-6 col-xs-6 align-right">79 places available</span>
-                                        </span>
-                                    </button>
-                                </form>
-                        </li>
-                </ul>
-            </div>
+        <div class="col-md-6">
+            <h2>What do you think of this service?</h2>
+            <a target="_blank" rel="noreferrer noopener"
+               href="https://www.smartsurvey.co.uk/s/readingroomvisitbooking/">Take our survey</a>
         </div>
     </div>
-</div>
-</div>
-        </div>
-    </main>
-    <section class="contact-footer">
-        <div class="row">
-            <div class="col-md-6 first">
-                <h2>Need help with this service?</h2>
-                <a target="_blank" rel="noreferrer noopener" href="https://www.nationalarchives.gov.uk/contact-us/">Contact us</a>
-            </div>
-            <div class="col-md-6">
-                <h2>What do you think of this service?</h2>
-                <a target="_blank" rel="noreferrer noopener" href="https://www.smartsurvey.co.uk/s/readingroomvisitbooking/">Take our survey</a>
-            </div>
-        </div>
-    </section>
-    <footer id="footer">
+</section>
+<footer id="footer">
     <h2 class="sr-only">Footer</h2>
     <div class="newsletter">
-    <div class="container">
-        <div class="row newsletter-content">
-            <div class="col-md-1">
-                <div class="news-icon">
-                    <div class="icon-circle icon-envelope icon-size-64"></div>
+        <div class="container">
+            <div class="row newsletter-content">
+                <div class="col-md-1">
+                    <div class="news-icon">
+                        <div class="icon-circle icon-envelope icon-size-64"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-11">
-                <div class="news-content" id="newsletterAccessibility">
-                    <h3>Sign me up to The National Archives' mailing list</h3>
-                    <p>Subscribe now for regular news, updates and priority booking for events.<br><a href="https://www.nationalarchives.gov.uk/contact-us/email-updates/" class="button">Sign up</a></p>
+                <div class="col-md-11">
+                    <div class="news-content" id="newsletterAccessibility">
+                        <h3>Sign me up to The National Archives' mailing list</h3>
+                        <p>Subscribe now for regular news, updates and priority booking for events.<br><a
+                                href="https://www.nationalarchives.gov.uk/contact-us/email-updates/" class="button">Sign
+                            up</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <div class="footer-content">
         <div class="container">
             <div class="row">
-    <div class="footer-col col-xs-12 col-sm-12 col-md-3 col-lg-3">
-        <div class="row">
-            <div class="footer-col col-xs-12 col-sm-6 col-md-12 col-lg-12">
-                <img src="/book-a-reading-room-visit/images/tna-square-white-logo.png" srcset="/book-a-reading-room-visit/images/tna-square-white-logo.svg" alt="The National Archives" class="img-responsive square-logo">
-                <address>
-                    The National Archives<br />
-                    Kew, Richmond<br />
-                    TW9 4DU
-                </address>
-            </div>
-        </div>
-    </div>
-    <div class="footer-col col-xs-12 col-sm-12 col-md-6">
-        <div class="row">
-            <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h3>Find out more</h3>
-                <ul>
-                    <li><a href="https://www.nationalarchives.gov.uk/contact-us/">Contact us</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/about/press-room/">Press room</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/about/jobs/">Jobs and careers</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/about/get-involved/friends-of-the-national-archives/">Friends of The National Archives</a></li>
-                </ul>
-            </div>
-            <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h3>Websites</h3>
-                <ul>
-                    <li><a href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
-                    <li><a href="https://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
-                    <li><a href="http://bookshop.nationalarchives.gov.uk/">Bookshop</a></li>
-                    <li><a href="https://images.nationalarchives.gov.uk/">Image library</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/webarchive/">UK Government Web Archive</a></li>
-                    <li><a href="https://www.legislation.gov.uk/" target="_blank" rel="noreferrer" title="Opens a new window">Legislation.gov.uk<span class="sr-only">Opens a new window</span></a></li>
-                    <li><a href="https://www.thegazette.co.uk/" target="_blank" rel="noreferrer" title="Opens a new window">The Gazette<span class="sr-only">Opens a new window</span></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h3>Site help</h3>
-                <ul>
-                    <li><a href="https://www.nationalarchives.gov.uk/help/">Help</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/help/a-to-z/">Website A-Z index</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/help/web-accessibility/">Accessibility</a></li>
-                </ul>
-            </div>
-            <div class="footer-col col-xs-12 col-sm-6 col-md-6">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="https://www.nationalarchives.gov.uk/legal/">Terms of use</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/legal/privacy.htm">Privacy policy</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/legal/cookies.htm">Cookies</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/about/freedom-of-information/">Freedom of Information</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/about/our-role/transparency/">Transparency</a></li>
-                    <li><a href="https://www.nationalarchives.gov.uk/legal/our-fees.htm">Our fees</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-col col-xs-12 col-sm-12 col-md-3">
-        <div class="row">
-            <div class="footer-col col-xs-12 col-sm-6 col-md-12">
-                <h3>Follow us</h3>
-                <div class="follow-us">
-                    <a href="https://twitter.com/UKNatArchives" title="Follow us on Twitter - Opens a new window" target="_blank" rel="noreferrer">
-                        <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/twitter.png"
-                             alt="Twitter logo">
-                        <span class="sr-only">Opens a new window</span>
-                    </a>
-                    <a href="https://www.youtube.com/c/TheNationalArchivesUK" title="Follow us on YouTube - Opens a new window"
-                       target="_blank" rel="noreferrer">
-                        <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/youtube-play.png"
-                             alt="YouTube logo">
-                        <span class="sr-only">Opens a new window</span>
-                    </a>
-                    <a href="https://www.flickr.com/photos/nationalarchives" title="Follow us on Flickr - Opens a new window"
-                       target="_blank" rel="noreferrer">
-                        <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/flickr.png" alt="Flickr logo">
-                        <span class="sr-only">Opens a new window</span>
-                    </a>
-                    <a href="https://www.facebook.com/TheNationalArchives" title="Follow us on Facebook - Opens a new window"
-                       target="_blank" rel="noreferrer">
-                        <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/facebook.png"
-                             alt="Facebook logo">
-                        <span class="sr-only">Opens a new window</span>
-                    </a>
-                    <a href="http://dev-www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
-                        <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/rss.png" alt="RSS logo">
-                    </a>
+                <div class="footer-col col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="row">
+                        <div class="footer-col col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                            <img src="/book-a-reading-room-visit/images/tna-square-white-logo.png"
+                                 srcset="/book-a-reading-room-visit/images/tna-square-white-logo.svg"
+                                 alt="The National Archives" class="img-responsive square-logo">
+                            <address>
+                                The National Archives<br/>
+                                Kew, Richmond<br/>
+                                TW9 4DU
+                            </address>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col col-xs-12 col-sm-12 col-md-6">
+                    <div class="row">
+                        <div class="footer-col col-xs-12 col-sm-6 col-md-6">
+                            <h3>Find out more</h3>
+                            <ul>
+                                <li><a href="https://www.nationalarchives.gov.uk/contact-us/">Contact us</a></li>
+                                <li><a href="https://www.nationalarchives.gov.uk/about/press-room/">Press room</a></li>
+                                <li><a href="https://www.nationalarchives.gov.uk/about/jobs/">Jobs and careers</a></li>
+                                <li>
+                                    <a href="https://www.nationalarchives.gov.uk/about/get-involved/friends-of-the-national-archives/">Friends
+                                        of The National Archives</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-xs-12 col-sm-6 col-md-6">
+                            <h3>Websites</h3>
+                            <ul>
+                                <li><a href="https://blog.nationalarchives.gov.uk/">Blog</a></li>
+                                <li><a href="https://media.nationalarchives.gov.uk/">Podcasts and videos</a></li>
+                                <li><a href="http://bookshop.nationalarchives.gov.uk/">Bookshop</a></li>
+                                <li><a href="https://images.nationalarchives.gov.uk/">Image library</a></li>
+                                <li><a href="https://www.nationalarchives.gov.uk/webarchive/">UK Government Web
+                                    Archive</a></li>
+                                <li><a href="https://www.legislation.gov.uk/" target="_blank" rel="noreferrer"
+                                       title="Opens a new window">Legislation.gov.uk<span class="sr-only">Opens a new window</span></a>
+                                </li>
+                                <li><a href="https://www.thegazette.co.uk/" target="_blank" rel="noreferrer"
+                                       title="Opens a new window">The Gazette<span
+                                        class="sr-only">Opens a new window</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="footer-col col-xs-12 col-sm-6 col-md-6">
+                            <h3>Site help</h3>
+                            <ul>
+                                <li><a href="https://www.nationalarchives.gov.uk/help/">Help</a></li>
+                                <li><a href="https://www.nationalarchives.gov.uk/help/a-to-z/">Website A-Z index</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.nationalarchives.gov.uk/help/web-accessibility/">Accessibility</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-xs-12 col-sm-6 col-md-6">
+                            <h3>Legal</h3>
+                            <ul>
+                                <li><a href="https://www.nationalarchives.gov.uk/legal/">Terms of use</a></li>
+                                <li><a href="https://www.nationalarchives.gov.uk/legal/privacy.htm">Privacy policy</a>
+                                </li>
+                                <li><a href="https://www.nationalarchives.gov.uk/legal/cookies.htm">Cookies</a></li>
+                                <li><a href="https://www.nationalarchives.gov.uk/about/freedom-of-information/">Freedom
+                                    of Information</a></li>
+                                <li><a href="https://www.nationalarchives.gov.uk/about/our-role/transparency/">Transparency</a>
+                                </li>
+                                <li><a href="https://www.nationalarchives.gov.uk/legal/our-fees.htm">Our fees</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col col-xs-12 col-sm-12 col-md-3">
+                    <div class="row">
+                        <div class="footer-col col-xs-12 col-sm-6 col-md-12">
+                            <h3>Follow us</h3>
+                            <div class="follow-us">
+                                <a href="https://twitter.com/UKNatArchives"
+                                   title="Follow us on Twitter - Opens a new window" target="_blank" rel="noreferrer">
+                                    <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/twitter.png"
+                                         alt="Twitter logo">
+                                    <span class="sr-only">Opens a new window</span>
+                                </a>
+                                <a href="https://www.youtube.com/c/TheNationalArchivesUK"
+                                   title="Follow us on YouTube - Opens a new window"
+                                   target="_blank" rel="noreferrer">
+                                    <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/youtube-play.png"
+                                         alt="YouTube logo">
+                                    <span class="sr-only">Opens a new window</span>
+                                </a>
+                                <a href="https://www.flickr.com/photos/nationalarchives"
+                                   title="Follow us on Flickr - Opens a new window"
+                                   target="_blank" rel="noreferrer">
+                                    <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/flickr.png"
+                                         alt="Flickr logo">
+                                    <span class="sr-only">Opens a new window</span>
+                                </a>
+                                <a href="https://www.facebook.com/TheNationalArchives"
+                                   title="Follow us on Facebook - Opens a new window"
+                                   target="_blank" rel="noreferrer">
+                                    <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/facebook.png"
+                                         alt="Facebook logo">
+                                    <span class="sr-only">Opens a new window</span>
+                                </a>
+                                <a href="http://dev-www.nationalarchives.gov.uk/rss/" title="Follow us via RSS">
+                                    <img src="https://www.nationalarchives.gov.uk/wp-content/themes/tna-base/img/social/rss.png"
+                                         alt="RSS logo">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-col col-xs-12 col-sm-6 col-md-12">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-col col-xs-12 col-sm-6 col-md-12">
+            <div class="row footer-base">
+                <div class="col-xs-12 col-sm-9 col-md-9 ogl">
+                    <a title="External website - opens in a new window"
+                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img
+                            alt="Open Government License logo"
+                            src="https://www.nationalarchives.gov.uk/images/global/logo-ogl.png"/> <span
+                            class="sr-only">Opens in a new window</span> </a>
+                    <p>All content is available under the <a
+                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/">Open Government
+                        Licence v3.0</a>, <br/>except where otherwise stated </p>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 gov-uk">
+                    <a class="footer-base-external-branding-gov-logo-adjust"
+                       title="External website - opens in a new window" href="https://gov.uk/" target="_blank"
+                       rel="noreferrer"> <img alt="GOV.UK logo"
+                                              src="https://www.nationalarchives.gov.uk/images/global/gov-uk.png"/> <span
+                            class="sr-only">Opens in a new window</span> </a>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="row footer-base">
-    <div class="col-xs-12 col-sm-9 col-md-9 ogl">
-        <a title="External website - opens in a new window" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/"> <img alt="Open Government License logo" src="https://www.nationalarchives.gov.uk/images/global/logo-ogl.png" /> <span class="sr-only">Opens in a new window</span> </a>
-        <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/">Open Government Licence v3.0</a>, <br />except where otherwise stated </p>
-    </div>
-    <div class="col-xs-12 col-sm-3 col-md-3 gov-uk">
-        <a class="footer-base-external-branding-gov-logo-adjust" title="External website - opens in a new window" href="https://gov.uk/" target="_blank" rel="noreferrer"> <img alt="GOV.UK logo" src="https://www.nationalarchives.gov.uk/images/global/gov-uk.png" /> <span class="sr-only">Opens in a new window</span> </a>
-    </div>
-</div>
         </div>
     </div>
 </footer>
 
-    <script src="/book-a-reading-room-visit/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/book-a-reading-room-visit/js/mega-menu.js"></script>
-    <script src="/book-a-reading-room-visit/js/cookie-banner.js"></script>
-    <script src="/book-a-reading-room-visit/js/select-a-date.js"></script>
+<script src="/book-a-reading-room-visit/lib/jquery/dist/jquery.min.js"></script>
+<script src="/book-a-reading-room-visit/js/mega-menu.js"></script>
+<script src="/book-a-reading-room-visit/js/cookie-banner.js"></script>
 </body>
 </html>
