@@ -66,8 +66,16 @@
         }
 
         .jumplink-container span {
-            display: inline-block;
+            display: block;
             width: 10em;
+            margin-top: 1em;
+        }
+        .jumplink-container .jump-to-date span {
+            margin-top: 0;
+        }
+        .jumplink-container .small {
+            width: auto;
+            margin-top: 0;
         }
         #date-selection button {
             margin: 0;
@@ -106,6 +114,10 @@
             }
             #date-selection .jumplink-container ul li:last-child {
                 border-right: 0;
+            }
+            .jumplink-container span {
+                display: inline-block;
+                margin: 0;
             }
         }
 
@@ -339,7 +351,7 @@
                 <h3>Select a date</h3>
 
                         <div class="jumplink-container">
-                            <p class="jump-to-date"><span>First available date:</span> <b>Saturday 03 July 2021</b></p>
+                            <p class="jump-to-date"><span>First available date:</span> <b>Saturday 03 July 2021</b> &nbsp;<span class="small">(<a href="#first-available">Jump to this date</a>)</span></p>
                             <p><span>Jump to:</span></p>
                             <ul>
                                 <li><a href="#june">June 2021</a></li>
@@ -397,7 +409,7 @@
                                     <span class="col-md-6 col-sm-6 col-xs-6 align-right">0 places available</span>
                                 </span>
                     </li>
-                    <li class="date">
+                    <li class="date" id="first-available">
                         <form action="/book-a-reading-room-visit/standard-order-visit/secure-booking" method="POST" data-gtm-vis-first-on-screen-215575_424="26" data-gtm-vis-total-visible-time-215575_424="100" data-gtm-vis-has-fired-215575_424="1">
                             <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FHIeCsuRBdEk2GVv7C_QK5ni7pW4u2H2Vvj9Scny8HwL4ocG-cby1NK-GftRmkTd_q6mfaTggPGBdXWhUFbuXAii9hewbbPC9O33Z4wHxlU8Y78OFEX8uR2a2IesA9NfN1F-0pP6QoO5uQHQBrPY6s">
                             <input name="seattype" type="hidden" value="standard-reading-room">
