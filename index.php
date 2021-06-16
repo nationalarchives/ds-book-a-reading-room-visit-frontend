@@ -93,6 +93,12 @@
 <h1>Static HTML for Kew Booking Service</h1>
 <p class="standfirst">This is a collection of HTML templates for front-end development of the KBS user interface.</p>
 
+<h2>Candidates for 12 week availability</h2>
+<ul>
+    <li><span>1.1</span><a href="select_a_date_(standard)_12_weeks_jumplinks.html">Select a date (standard visit) - jumplink variant</a><br>select_a_date_(standard)_12_weeks_jumplinks.html</li>
+    <li><span>1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure.html">Select a date (standard visit) - disclosure variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure.html</li>
+</ul>
+
 <h2>Page templates</h2>
 <ul>
     <li><span>1</span><a href="service_homepage.html">Service homepage</a><br>service_homepage.html</li>
