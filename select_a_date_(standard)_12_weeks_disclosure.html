@@ -6,6 +6,7 @@
     <title>Select date - standard booking - The National Archives</title>
 
     <style>
+
         #date-selection summary {
             padding: 2rem;
             font-weight: bold;
@@ -24,12 +25,21 @@
 
         #date-selection details > summary {
             border-bottom: 3px solid #dedede;
-            /*background: rgba(19, 69, 113, 0.12);*/
+            cursor: pointer;
+        }
+
+        #date-selection details[open] > summary {
+            background-color: rgba(239, 239, 239, 0.81);
+        }
+
+        #date-selection details > summary:hover {
+            background-color: rgba(239, 239, 239, 0.81);
         }
 
         #date-selection details[open] + details[open] {
             border-top-width: 0;
         }
+
 
         #date-selection details + details[open] {
             border-top-width: 0;

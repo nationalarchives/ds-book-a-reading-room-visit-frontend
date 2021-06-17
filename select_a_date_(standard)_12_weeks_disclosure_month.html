@@ -24,12 +24,21 @@
 
         #date-selection details > summary {
             border-bottom: 3px solid #dedede;
-            /*background: rgba(19, 69, 113, 0.12);*/
+            cursor: pointer;
+        }
+
+        #date-selection details[open] > summary {
+            background-color: rgba(239, 239, 239, 0.81);
+        }
+
+        #date-selection details > summary:hover {
+            background-color: rgba(239, 239, 239, 0.81);
         }
 
         #date-selection details[open] + details[open] {
             border-top-width: 0;
         }
+
 
         #date-selection details + details[open] {
             border-top-width: 0;
@@ -52,6 +61,11 @@
             border: none !important;
             padding-top: 0 !important;
             padding-bottom: 0 !important;
+        }
+
+        #date-selection .end-of-week {
+            padding-bottom: 1em;
+            border-bottom: 2px dotted #ddd;
         }
 
     </style>
@@ -395,7 +409,7 @@
                                 <li>Wednesday 23 June <span>0 places available</span></li>
                                 <li>Thursday 24 June <span>0 places available</span></li>
                                 <li>Friday 25 June <span>0 places available</span></li>
-                                <li>Saturday 26 June <span>0 places available</span></li>
+                                <li class="end-of-week">Saturday 26 June <span>0 places available</span></li>
                                 <li>Tuesday 29 June <span>0 places available</span></li>
                                 <li>Wednesday 30 June <span>0 places available</span></li>
                             </ul>
@@ -404,28 +418,28 @@
                             <summary><span>1 to 31 July 2021</span><span>446 spaces available</span></summary>
                             <ul class="av-dates">
                                 <li>Thursday 1 July <span>0 places available</span></li>
-                                <li>Friday 2 July <span>0 places available</span></li>
-                                <li>Saturday 3 July <span>0 places available</span></li>
+                                <li>Friday 2 July <span>0 places available</ class="end-of-week" span></li>
+                                <li class="end-of-week">Saturday 3 July <span>0 places available</span></li>
                                 <li>Tuesday 6 July <span>0 places available</span></li>
                                 <li>Wednesday 7 July <span>0 places available</span></li>
                                 <li>Thursday 8 July <span>0 places available</span></li>
-                                <li>Friday 9 July <span>0 places available</span></li>
-                                <li>Saturday 10 July <span>0 places available</span></li>
+                                <li>Friday 9 July <span>0 places available</ class="end-of-week" span></li>
+                                <li class="end-of-week">Saturday 10 July <span>0 places available</span></li>
                                 <li>Tuesday 13 July <span>0 places available</span></li>
                                 <li>Wednesday 14 July <span>0 places available</span></li>
                                 <li>Thursday 15 July <span>0 places available</span></li>
-                                <li><a href="#">Friday 16 July</a> <span>3 places available</span></li>
-                                <li>Saturday 17 July <span>0 places available</span></li>
+                                <li><a href="#">Friday 16 July</a> <span>3 places available</ class="end-of-week" span></li>
+                                <li class="end-of-week">Saturday 17 July <span>0 places available</span></li>
                                 <li><a href="#">Tuesday 20 July</a> <span>18 places available</span></li>
                                 <li><a href="#">Wednesday 21 July</a> <span>23 places available</span></li>
                                 <li><a href="#">Thursday 22 July</a> <span>30 places available</span></li>
                                 <li><a href="#">Friday 23 July</a> <span>67 places available</span></li>
-                                <li><a href="#">Saturday 24 July</a> <span>5 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 24 July</a> <span>5 places available</span></li>
                                 <li><a href="#">Tuesday 27 July</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 28 July</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 29 July</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 30 July</a> <span>75 places available</span></li>
-                                <li><a href="#">Saturday 31 July</a> <span>42 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 31 July</a> <span>42 places available</span></li>
                             </ul>
                         </details>
 
@@ -436,22 +450,22 @@
                                 <li><a href="#">Wednesday 4 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 5 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 6 August</a> <span>75 places available</span></li>
-                                <li><a href="#">Saturday 7 August</a> <span>42 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 7 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 10 August</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 11 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 12 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 13 August</a> <span>75 places available</span></li>
-                                <li><a href="#">Saturday 14 August</a> <span>42 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 14 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 18 August</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 19 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 20 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 21 August</a> <span>75 places available</span></li>
-                                <li><a href="#">Saturday 22 August</a> <span>42 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 22 August</a> <span>42 places available</span></li>
                                 <li><a href="#">Tuesday 25 August</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 26 August</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 27 August</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 28 August</a> <span>75 places available</span></li>
-                                <li><a href="#">Saturday 29 August</a> <span>42 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 29 August</a> <span>42 places available</span></li>
                             </ul>
                         </details>
                         <details >
@@ -461,12 +475,12 @@
                                 <li><a href="#">Wednesday 2 September</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 3 September</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 4 September</a> <span>75 places available</span></li>
-                                <li><a href="#">Saturday 5 September</a> <span>75 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 5 September</a> <span>75 places available</span></li>
                                 <li><a href="#">Tuesday 8 September</a> <span>38 places available</span></li>
                                 <li><a href="#">Wednesday 9 September</a> <span>70 places available</span></li>
                                 <li><a href="#">Thursday 10 September</a> <span>75 places available</span></li>
                                 <li><a href="#">Friday 11 September</a> <span>75 places available</span></li>
-                                <li><a href="#">Saturday 12 September</a> <span>42 places available</span></li>
+                                <li class="end-of-week"><a href="#">Saturday 12 September</a> <span>42 places available</span></li>
                             </ul>
                         </details>
                     </div>
