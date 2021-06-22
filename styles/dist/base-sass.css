@@ -8755,4 +8755,8 @@ body .kbs .primary {
   margin-top: 0 !important;
 }
 
+details summary {
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=base-sass.css.map */

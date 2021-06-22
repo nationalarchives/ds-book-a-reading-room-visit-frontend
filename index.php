@@ -56,7 +56,7 @@
         }
         span {
             display: inline-block;
-            width: 45px;
+            width: 60px;
             font-size: 1.4em;
             font-weight: bold;
             color: #222;
@@ -95,9 +95,11 @@
 
 <h2>Candidates for 12 week availability</h2>
 <ul>
-    <li><span>1.1</span><a href="select_a_date_(standard)_12_weeks_jumplinks.html">Select a date (standard visit) - jumplink variant</a><br>select_a_date_(standard)_12_weeks_jumplinks.html</li>
-    <li><span>1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure.html">Select a date (standard visit) - disclosure by week variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure.html</li>
-    <li><span>1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure_month.html">Select a date (standard visit) - disclosure by month variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure_month.html</li>
+    <li><span>2.1.1</span><a href="select_a_date_(standard)_12_weeks_jumplinks.html">Select a date (standard visit) - jumplink variant</a><br>select_a_date_(standard)_12_weeks_jumplinks.html</li>
+    <li><span>2.2.1</span><a href="select_a_date_(bulk)_12_weeks_jumplinks.html">Select a date (bulk visit) - jumplink variant</a><br>select_a_date_(bulk)_12_weeks_jumplinks.html</li>
+    <li><span>2.2.2</span><a href="select_a_date_(bulk)_12_weeks_jumplinks_1day.html">Select a date (bulk visit) - jumplink variant - 1-day </a><br>select_a_date_(bulk)_12_weeks_jumplinks_1day.html</li>
+    <li><span>2.1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure.html">Select a date (standard visit) - disclosure by week variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure.html</li>
+    <li><span>2.1.3</span><a href="select_a_date_(standard)_12_weeks_disclosure_month.html">Select a date (standard visit) - disclosure by month variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure_month.html</li>
 </ul>
 
 <h2>Page templates</h2>
