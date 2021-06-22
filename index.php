@@ -82,6 +82,14 @@
             display: block;
 
         }
+        .notes {
+            display: block;
+            padding-top: 1em;
+            color: #222;
+            font-weight: normal;
+            width: 100%;
+            font-size: 1.1em;
+        }
         @media screen and (min-width: 768px) {
             body {
                 padding: 2em;
@@ -93,13 +101,11 @@
 <h1>Static HTML for Kew Booking Service</h1>
 <p class="standfirst">This is a collection of HTML templates for front-end development of the KBS user interface.</p>
 
-<h2>Candidates for 12 week availability</h2>
+<h2>12 week availability jumplink concept (chosen for development from 17 June) </h2>
 <ul>
-    <li><span>2.1.1</span><a href="select_a_date_(standard)_12_weeks_jumplinks.html">Select a date (standard visit) - jumplink variant</a><br>select_a_date_(standard)_12_weeks_jumplinks.html</li>
-    <li><span>2.2.1</span><a href="select_a_date_(bulk)_12_weeks_jumplinks.html">Select a date (bulk visit) - jumplink variant</a><br>select_a_date_(bulk)_12_weeks_jumplinks.html</li>
-    <li><span>2.2.2</span><a href="select_a_date_(bulk)_12_weeks_jumplinks_1day.html">Select a date (bulk visit) - jumplink variant - 1-day </a><br>select_a_date_(bulk)_12_weeks_jumplinks_1day.html</li>
-    <li><span>2.1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure.html">Select a date (standard visit) - disclosure by week variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure.html</li>
-    <li><span>2.1.3</span><a href="select_a_date_(standard)_12_weeks_disclosure_month.html">Select a date (standard visit) - disclosure by month variant</a><br>sselect_a_date_(standard)_12_weeks_disclosure_month.html</li>
+    <li><span>2.1.1</span><a href="select_a_date_(standard)_12_weeks_jumplinks.html">Select a date (standard visit)</a><br>select_a_date_(standard)_12_weeks_jumplinks.html</li>
+    <li><span>2.2.1</span><a href="select_a_date_(bulk)_12_weeks_jumplinks.html">Select a date (bulk visit)</a><br>select_a_date_(bulk)_12_weeks_jumplinks.html</li>
+    <li><span>2.2.2</span><a href="select_a_date_(bulk)_12_weeks_jumplinks_1day.html">Select a date (bulk visit) - 2-day to 1-day </a><br>select_a_date_(bulk)_12_weeks_jumplinks_1day.html</li>
 </ul>
 
 <h2>Page templates</h2>
@@ -143,7 +149,9 @@
     <li><span>6</span><a href="emails/src/valid_order_reminder.html">Valid order reminder</a><br>Sent to customer 2 days before the document ordering deadline for valid orders.</li>
     <li><span>7</span><a href="emails/src/invalid_order_reminder.html">Invalid order reminder</a><br>Sent to customer 2 days before the document ordering deadline for invalid orders.</li>
 </ul>
-
+<h2>Retired templates</h2>
+<li><span>2.1.2</span><a href="select_a_date_(standard)_12_weeks_disclosure.html">Select a date (standard visit) - disclosure by week variant</a><br>select_a_date_(standard)_12_weeks_disclosure.html <span class="notes">This was a proposed design which was user tested on 17 June and not chosen for further development.</span></li>
+<li><span>2.1.3</span><a href="select_a_date_(standard)_12_weeks_disclosure_month.html">Select a date (standard visit) - disclosure by month variant</a><br>select_a_date_(standard)_12_weeks_disclosure_month.html <span class="notes">This was a proposed design which was user tested on 17 June and not chosen for further development.</span></li>
 </body>
 </html>
 
